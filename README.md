@@ -28,14 +28,15 @@ The analysis of the election show that:
     - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes
 
 ## Overview of Election Audit
-The purpose of this election audit analysis was to determine the voter turnout for each county, the percentage of votes from each county out of the total count, and the county with the highest turnout.
+The purpose of this election audit analysis is to determine the voter turnout for each county, the percentage of votes from each county out of the total count, and the county with the highest turnout.
 
 ## Election-Audit Results
 - **369,711** votes were cast in this congressional election.
-- The number of votes for each county in the precinct was determined using the code: `votes = county_votes[county_name]`. The percentage of total votes for each county in the precinct was determined using the code: `vote_percentage = float(votes) / float(total_votes) * 100`.
+- The number of votes for each county in the precinct is determined using the code: `votes = county_votes[county_name]`. The percentage of total votes for each county in the precinct is determined using the code: `vote_percentage = float(votes) / float(total_votes) * 100`.
 - **Denver** county had the largest number of votes.
-- The number of votes each candidate received was determined using the code: `votes = candidate_votes.get(candidate_name)`. The percentage of the total votes each candidate received was determined using the code: `vote_percentage = float(votes) / float(total_votes) * 100`.
-- **Diana DeGette** won the election. Her vote count was **272,892**, and the percentage of the total votes was **73.8%**.
+- The number of votes each candidate received is determined using the code: `votes = candidate_votes.get(candidate_name)`. The percentage of the total votes each candidate received is determined using the code: `vote_percentage = float(votes) / float(total_votes) * 100`.
+- **Diana DeGette** won the election. Her vote count is **272,892**, and the percentage of the total votes is **73.8%**.
+- These results are printed on the election_analysis.txt file as shown in the image below: ![picture alt](https://github.com/ChristinaGalley/Election-Analysis/blob/main/Analysis/Election_Analysis_results_txtpage_%20image.png)
 
 ## Election-Audit Summary
 Although this script was used to for an election-audit of the recent local congressional election, it can be used—with some modifications—for any election. To modify the script for a differnt election, add a variable to load the corresponding results file from a path by modifying this code: `file_to_load = os.path.join("Resources", "election_results.csv")` to use the appropriate folder and file. Make sure the results file is formated in same way with 3 columns indicating, Ballot ID, County, and Candidate. Otherwise further modifcitions will be necessary, for example when getting candidate name from each row using code: `candidate_name = row[2]` the column number containing candidate names may not be listed under 2 if the format is different. 
