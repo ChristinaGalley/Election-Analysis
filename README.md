@@ -27,6 +27,15 @@ The analysis of the election show that:
 - The winner of the election was:
     - Diana DeGette, who received 73.8% of the vote and 272,892 number of votes
 
-## Challenge Overview
+## Overview of Election Audit
+The purpose of this election audit analysis was to determine the voter turnout for each county, the percentage of votes from each county out of the total count, and the county with the highest turnout.
 
-## Challenge Summary
+## Election-Audit Results
+    * **369,711** votes were cast in this congressional election.
+    * The number of votes for each county in the precinct was determined using the code: 'votes = county_votes[county_name]'. The percentage of total votes for each county in the precinct was determined using the code: 'vote_percentage = float(votes) / float(total_votes) * 100'.
+    * **Denver** county had the largest number of votes.
+    * The number of votes each candidate received was determined using the code: 'votes = candidate_votes.get(candidate_name)'. The percentage of the total votes each candidate received was determined using the code: 'vote_percentage = float(votes) / float(total_votes) * 100'.
+    * **Diana DeGette** won the election. Her vote count was **272,892**, and the percentage of the total votes was **73.8%**.
+
+## Election-Audit Summary
+Although this script was used to for an election-audit of the recent local congressional election, it can be used—with some modifications—for any election. To modify the script for a differnt election, add a variable to load the corresponding results file from a path using this code: 'file_to_load = os.path.join("*folder*", "*corresponding reults file ex. election_results.csv*")'.
